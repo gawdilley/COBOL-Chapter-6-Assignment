@@ -1,0 +1,8 @@
+       01  CUSTOMER-MASTER-RECORD.
+           05 CM-BRANCH-NUMBER       PIC 9(2).
+           05 CM-SALESREP-NUMBER     PIC 9(2).
+           05 CM-CUSTOMER-NUMBER     PIC 9(5).
+           05 CM-CUSTOMER-NAME       PIC X(20).
+           05 CM-SALES-THIS-YTD      PIC S9(5)V99.
+           05 CM-SALES-LAST-YTD      PIC S9(5)V99.
+           05 FILLER                 PIC X(87).
