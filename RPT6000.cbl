@@ -26,24 +26,14 @@
            LABEL RECORDS ARE STANDARD
            RECORD CONTAINS 130 CHARACTERS
            BLOCK CONTAINS 130 CHARACTERS.
-       01  CUSTOMER-MASTER-RECORD.
-           05 CM-BRANCH-NUMBER       PIC 9(2).
-           05 CM-SALESREP-NUMBER     PIC 9(2).
-           05 CM-CUSTOMER-NUMBER     PIC 9(5).
-           05 CM-CUSTOMER-NAME       PIC X(20).
-           05 CM-SALES-THIS-YTD      PIC S9(5)V99.
-           05 CM-SALES-LAST-YTD      PIC S9(5)V99.
-           05 FILLER                 PIC X(87).
+       COPY CUSTMAST.
 
        FD  INPUT-SALESREP
            RECORDING MODE IS F
            LABEL RECORDS ARE STANDARD
            RECORD CONTAINS 130 CHARACTERS
            BLOCK CONTAINS 130 CHARACTERS.
-       01  WS-SALESREP-RECORD.
-           05 SM-SALESREP-NUMBER     PIC 9(2).
-           05 SM-SALESREP-NAME       PIC X(10).
-           05 FILLER                 PIC X(118).
+       COPY SALESREP.
 
 
        FD  OUTPUT-RPT6000
@@ -256,9 +246,9 @@
 
        200-LOAD-SALESREP-TABLE.
 
-           PERFORM 
-              WITH TEST AFTER 
-              VARYING SRT-INDEX FROM 1 BY 1 
+           PERFORM
+              WITH TEST AFTER
+              VARYING SRT-INDEX FROM 1 BY 1
               UNTIL SALESREP-EOF
                  OR SRT-INDEX = 100
                  PERFORM 210-READ-SALESREP-TABLE-RECORD
@@ -271,10 +261,11 @@
            END-PERFORM.
 
        210-READ-SALESREP-TABLE-RECORD.
-              
-              READ INPUT-SALESREP RECORD INTO WS-SALESREP-RECORD
-                 AT END
-                     SET SALESREP-EOF TO TRUE.
+
+           READ INPUT-SALESREP
+              AT END
+                 SET SALESREP-EOF TO TRUE
+           END-READ.
 
        300-PREPARE-SALES-LINES.
            PERFORM 310-READ-CUSTOMER-RECORD.
