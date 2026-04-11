@@ -1,0 +1,15 @@
+Gabriel Dilley
+Self-Reflection - COBOL Chapter 6 Assignment
+April 9, 2026
+
+GitHub URL: https://github.com/gawdilley/COBOL-Chapter-6-Assignment
+
+---
+
+Overall, Chapter 6 went really well for me. A lot of the concepts we covered had already been introduced in class, so I felt confident going into the assignment. The main focus of this chapter was learning how to move data into external files, which makes code more reusable and accessible across multiple programs. That concept clicked for me pretty quickly, and I was able to apply it without too much trouble.
+
+The one thing that gave me a bit of frustration was the error codes we ran into toward the end of the assignment. Even the instructor wasn't sure what was causing them or how to resolve them, which made it hard to know if it was something I did wrong or just a quirk of the environment. It wasn't a major issue, but it was a little annoying not having a clear answer.
+
+The biggest challenge I ran into personally was a typo in my JCL when I created the new version of it. I fell behind in class trying to figure out why my job kept failing during submission, only to eventually discover it was just a simple typo. It was one of those frustrating-but-funny moments — once I found it, I had a good laugh about it. It was a good reminder to slow down and double-check my JCL syntax before submitting.
+
+Overall, this was a positive experience. I came away with a solid understanding of file handling in COBOL and a new appreciation for careful proofreading.
